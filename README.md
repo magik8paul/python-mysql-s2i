@@ -10,6 +10,6 @@
 
 3. Create a python pod via s2i that connects to MySQL 
 
-`oc new-app https://github.com/magik8paul/python-mysql-s2i.git --name pymyapp -e MYSQL_HOST=<your mysql app name> -e MYSQL_DATABASE=<from above> -e MYSQL_USER=<from above> -e MYSQL_PASSWORD=<from above>`
+`oc new-app registry.access.redhat.com/ubi8/python-38~https://github.com/magik8paul/python-mysql-s2i.git --name pymyapp -e MYSQL_HOST=<your mysql app name> -e MYSQL_DATABASE=<from above> -e MYSQL_USER=<from above> -e MYSQL_PASSWORD=<from above>`
 
 If python outputs 'apples' 'bananas' 'cherries', then you have a functioning multi-pod app!
