@@ -1,10 +1,10 @@
-import mysql.connector
+import mysql.connector, os
 
 mydb = mysql.connector.connect(
-  host="mysql",
-  user="userHS1",
-  passwd="hhwEuNbp3DOUvaAn",
-  database="sampledb"
+  host=os.environ.get('MYSQL_HOST'),
+  user=os.environ.get('MYSQL_USER'),
+  passwd=os.environ.get('MYSQL_PASSWORD'),
+  database=os.environ.get('MYSQL_DATABASE')
 )
 
 mycursor = mydb.cursor()
